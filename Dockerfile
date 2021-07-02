@@ -20,6 +20,7 @@ RUN npm run build
 #####
 # Base
 FROM nginx
+EXPOSE 80
 
 # Dependency | from flag indicates take from the build phase
 COPY --from=0 /app/build /usr/share/nginx/html
